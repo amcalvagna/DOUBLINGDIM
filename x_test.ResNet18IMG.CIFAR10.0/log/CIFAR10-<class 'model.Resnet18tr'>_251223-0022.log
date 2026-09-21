@@ -1,0 +1,290 @@
+Running: main.py...
+Hyper parameters:
+ {'name': 'Resnet18 modified conv and Pretrained with IMAGENETv2 and then WM38', 'model': 'Resnet18tr', 'pretrained_weights': 'IMAGENET1K_v1', 'dataset': 'CIFAR10', 'batch_size': 128, 'epochs': 60, 'validation_frequency': 5, 'seed': 1, 'lr': 0.01, 'criterion': 'CrossEntropyLoss', 'criterion_kwargs': {}, 'optimizer': 'SGD', 'optimizer_kwargs': {'momentum': 0.9, 'weight_decay': 0.0005}, 'scheduler': 'CosineAnnealingLR', 'scheduler_kwargs': {'T_max': 80}, 'debug': False, 'n_kfolds': 6, 'val_quota': 0.1, 'test_quota': 0.17, 'YLIMACCU': [0, 100], 'YLIMLOSS': [0, 5], 'TLIMACCU': [0, 110], 'TLIMLOSS': [0, 5], 'origins': [], 'metrics': ['Wasserstein_fast'], 'samplers': ['Norm_Min'], 'ratios': [0.01, 0.025, 0.075, 0.25, 0.5, 0.75]}.
+
+Processing inner split for outer fold 1
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 2
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 3
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 4
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 5
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 6
+Inner train = 45000, inner val = 5000, test = 10000
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 10] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 10] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 10] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 10] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 10] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 10] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 10] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 10] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 10] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 10] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 10] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 10] head...
+- resnet18[BACK] modified to suit 32x32 images
+FEATURE EXTRACTION Done.
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.Cifar10.0/save/CIFAR10_metadata_0.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[38.43196341094881, 34.32060414459556, 29.509753028905834, 24.313443535480474, 20.92253135951978, 18.302831083270576]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.Cifar10.0/save/CIFAR10_metadata_1.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[38.43196341094881, 34.32060414459556, 29.509753028905834, 24.313443535480474, 20.92253135951978, 18.302831083270576], [33.317482553000445, 29.856307026697323, 26.062509669587598, 21.98891464537519, 19.29658630175618, 17.181915748318715]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.Cifar10.0/save/CIFAR10_metadata_2.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[38.43196341094881, 34.32060414459556, 29.509753028905834, 24.313443535480474, 20.92253135951978, 18.302831083270576], [33.317482553000445, 29.856307026697323, 26.062509669587598, 21.98891464537519, 19.29658630175618, 17.181915748318715], [35.7228315565153, 31.652226008940488, 27.321309326078335, 22.804793163071736, 19.81160832650494, 17.438923446861736]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.Cifar10.0/save/CIFAR10_metadata_3.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[38.43196341094881, 34.32060414459556, 29.509753028905834, 24.313443535480474, 20.92253135951978, 18.302831083270576], [33.317482553000445, 29.856307026697323, 26.062509669587598, 21.98891464537519, 19.29658630175618, 17.181915748318715], [35.7228315565153, 31.652226008940488, 27.321309326078335, 22.804793163071736, 19.81160832650494, 17.438923446861736], [35.95839421870187, 31.97862661239924, 27.61936059778236, 23.014218136224372, 20.056177013844717, 17.84118233883055]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.Cifar10.0/save/CIFAR10_metadata_4.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[38.43196341094881, 34.32060414459556, 29.509753028905834, 24.313443535480474, 20.92253135951978, 18.302831083270576], [33.317482553000445, 29.856307026697323, 26.062509669587598, 21.98891464537519, 19.29658630175618, 17.181915748318715], [35.7228315565153, 31.652226008940488, 27.321309326078335, 22.804793163071736, 19.81160832650494, 17.438923446861736], [35.95839421870187, 31.97862661239924, 27.61936059778236, 23.014218136224372, 20.056177013844717, 17.84118233883055], [34.11302435747348, 30.1271973514813, 26.00309882039437, 21.603960190477665, 18.775405731474166, 16.52097869188583]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.Cifar10.0/save/CIFAR10_metadata_5.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[38.43196341094881, 34.32060414459556, 29.509753028905834, 24.313443535480474, 20.92253135951978, 18.302831083270576], [33.317482553000445, 29.856307026697323, 26.062509669587598, 21.98891464537519, 19.29658630175618, 17.181915748318715], [35.7228315565153, 31.652226008940488, 27.321309326078335, 22.804793163071736, 19.81160832650494, 17.438923446861736], [35.95839421870187, 31.97862661239924, 27.61936059778236, 23.014218136224372, 20.056177013844717, 17.84118233883055], [34.11302435747348, 30.1271973514813, 26.00309882039437, 21.603960190477665, 18.775405731474166, 16.52097869188583], [36.76210812761565, 32.69440750290232, 28.56676909624366, 23.800274619523407, 20.6613214525496, 18.152003158415027]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loading Full Dataset Trained model data: ./test.ResNet18IMG.Cifar10.0/save/LINEAR[512, 10]_CIFAR10_trains_60.pt 
+Doubling dimension computations running on MPS.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:1%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 450
+Processed points amount: 450
+Approx doubling constant λ: 122
+Approx doubling dimension  : 6.930737337562887
+Elapsed time: 0:00:46.558135.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:2%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 1126
+Processed points amount: 1126
+Approx doubling constant λ: 221
+Approx doubling dimension  : 7.787902559391432
+Elapsed time: 0:01:27.147758.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:8%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 3374
+Processed points amount: 3374
+Approx doubling constant λ: 363
+Approx doubling dimension  : 8.50382573799575
+Elapsed time: 0:03:06.297376.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:25%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 11250
+Processed points amount: 11250
+Approx doubling constant λ: 532
+Approx doubling dimension  : 9.055282435501189
+Elapsed time: 0:10:18.314742.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:50%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 22499
+Processed points amount: 22499
+Approx doubling constant λ: 666
+Approx doubling dimension  : 9.379378367071261
+Elapsed time: 0:42:52.376463.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:75%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 33750
+Processed points amount: 33750
+Approx doubling constant λ: 700
+Approx doubling dimension  : 9.451211111832329
+Elapsed time: 3:05:23.288223.
+Doubling dimension computations running on MPS.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:1%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 450
+Processed points amount: 450
+Approx doubling constant λ: 93
+Approx doubling dimension  : 6.539158811108031
+Elapsed time: 0:00:47.711147.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:2%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 1126
+Processed points amount: 1126
+Approx doubling constant λ: 149
+Approx doubling dimension  : 7.219168520462161
+Elapsed time: 0:01:16.795167.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:8%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 3374
+Processed points amount: 3374
+Approx doubling constant λ: 299
+Approx doubling dimension  : 8.224001674198105
+Elapsed time: 0:02:43.747298.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:25%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 11251
+Processed points amount: 11251
+Approx doubling constant λ: 532
+Approx doubling dimension  : 9.055282435501189
+Elapsed time: 0:10:20.818021.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:50%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 22500
+Processed points amount: 22500
+Approx doubling constant λ: 636
+Approx doubling dimension  : 9.312882955284355
+Elapsed time: 0:33:56.424090.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:75%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 33750
+Processed points amount: 33750
+Approx doubling constant λ: 708
+Approx doubling dimension  : 9.467605550082997
+Elapsed time: 2:40:37.157225.
+Doubling dimension computations running on MPS.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:1%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 450
+Processed points amount: 450
+Approx doubling constant λ: 114
+Approx doubling dimension  : 6.832890014164741
+Elapsed time: 0:00:57.077243.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:2%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 1125
+Processed points amount: 1125
+Approx doubling constant λ: 194
+Approx doubling dimension  : 7.599912842187128
+Elapsed time: 0:01:34.991299.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:8%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 3375
+Processed points amount: 3375
+Approx doubling constant λ: 333
+Approx doubling dimension  : 8.379378367071261
+Elapsed time: 0:03:14.127654.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:25%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 11250
+Processed points amount: 11250
+Approx doubling constant λ: 518
+Approx doubling dimension  : 9.016808287686555
+Elapsed time: 0:09:54.718713.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:50%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 22500
+Processed points amount: 22500
+Approx doubling constant λ: 655
+Approx doubling dimension  : 9.355351096424812
+Elapsed time: 0:34:43.698571.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:75%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 33749
+Processed points amount: 33749
+Approx doubling constant λ: 683
+Approx doubling dimension  : 9.41574176829009
+Elapsed time: 2:56:57.008552.
+Doubling dimension computations running on MPS.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:1%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 450
+Processed points amount: 450
+Approx doubling constant λ: 100
+Approx doubling dimension  : 6.643856189774724
+Elapsed time: 0:00:48.910217.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:2%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 1125
+Processed points amount: 1125
+Approx doubling constant λ: 172
+Approx doubling dimension  : 7.426264754702098
+Elapsed time: 0:01:33.944190.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:8%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 3375
+Processed points amount: 3375
+Approx doubling constant λ: 310
+Approx doubling dimension  : 8.276124405274238
+Elapsed time: 0:02:58.543540.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:25%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 11251
+Processed points amount: 11251
+Approx doubling constant λ: 548
+Approx doubling dimension  : 9.098032082960527
+Elapsed time: 0:10:59.169749.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:50%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 22499
+Processed points amount: 22499
+Approx doubling constant λ: 672
+Approx doubling dimension  : 9.39231742277876
+Elapsed time: 0:37:06.438580.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:75%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 33751
+Processed points amount: 33751
+Approx doubling constant λ: 734
+Approx doubling dimension  : 9.519636252843213
+Elapsed time: 3:00:24.744668.
+Doubling dimension computations running on MPS.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:1%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 450
+Processed points amount: 450
+Approx doubling constant λ: 107
+Approx doubling dimension  : 6.741466986401147
+Elapsed time: 0:00:47.784173.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:2%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 1125
+Processed points amount: 1125
+Approx doubling constant λ: 187
+Approx doubling dimension  : 7.546894459887636
+Elapsed time: 0:01:41.127672.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:8%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 3375
+Processed points amount: 3375
+Approx doubling constant λ: 367
+Approx doubling dimension  : 8.519636252843213
+Elapsed time: 0:03:41.054313.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:25%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 11250
+Processed points amount: 11250
+Approx doubling constant λ: 635
+Approx doubling dimension  : 9.310612781659529
+Elapsed time: 0:13:30.762009.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:50%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 22500
+Processed points amount: 22500
+Approx doubling constant λ: 705
+Approx doubling dimension  : 9.461479447286155
+Elapsed time: 0:40:28.745249.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:75%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 33750
+Processed points amount: 33750
+Approx doubling constant λ: 726
+Approx doubling dimension  : 9.50382573799575
+Elapsed time: 3:14:28.890440.
+Doubling dimension computations running on MPS.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:1%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 450
+Processed points amount: 450
+Approx doubling constant λ: 96
+Approx doubling dimension  : 6.584962500721156
+Elapsed time: 0:00:46.709023.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:2%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 1125
+Processed points amount: 1125
+Approx doubling constant λ: 157
+Approx doubling dimension  : 7.294620748891627
+Elapsed time: 0:01:18.026721.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:8%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 3375
+Processed points amount: 3375
+Approx doubling constant λ: 316
+Approx doubling dimension  : 8.303780748177102
+Elapsed time: 0:02:58.748332.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:25%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 11249
+Processed points amount: 11249
+Approx doubling constant λ: 529
+Approx doubling dimension  : 9.047123912114026
+Elapsed time: 0:10:27.678318.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:50%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 22500
+Processed points amount: 22500
+Approx doubling constant λ: 649
+Approx doubling dimension  : 9.342074667999139
+Elapsed time: 0:34:50.292228.
+Computing DD for model: LINEAR[512, 10] on CIFAR10 coreset ('Wasserstein_fast', 'Norm_Min') with compression:75%
+Using max 100 random points, 10 spaced radiuses per center, early stop at max 33749
+Processed points amount: 33749
+Approx doubling constant λ: 706
+Approx doubling dimension  : 9.46352437327118
+Elapsed time: 3:04:46.295976.
+Drawing ./test.ResNet18IMG.Cifar10.0/img/LINEAR[512, 10]-train-Wasserstein_fast-Norm_Min-60.png
+TRAIN AND PLOT Done.
+processing took:  84290.37 seconds (1404.84) minutes).

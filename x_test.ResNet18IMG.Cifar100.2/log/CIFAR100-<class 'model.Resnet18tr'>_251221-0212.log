@@ -1,0 +1,28 @@
+Running: main.py...
+Hyper parameters:
+ {'name': 'Resnet18 modified conv and Pretrained with IMAGENETv2 and then WM38', 'model': 'Resnet18tr', 'pretrained_weights': 'IMAGENET1K_v1', 'dataset': 'CIFAR100', 'batch_size': 128, 'epochs': 100, 'validation_frequency': 5, 'seed': 1, 'lr': 0.01, 'criterion': 'CrossEntropyLoss', 'criterion_kwargs': {}, 'optimizer': 'SGD', 'optimizer_kwargs': {'momentum': 0.9, 'weight_decay': 0.0005}, 'scheduler': 'CosineAnnealingLR', 'scheduler_kwargs': {'T_max': 80}, 'debug': False, 'n_kfolds': 6, 'val_quota': 0.1, 'test_quota': 0.17, 'YLIMACCU': [0, 100], 'YLIMLOSS': [0, 5], 'TLIMACCU': [0, 90], 'TLIMLOSS': [0, 5], 'origins': [], 'metrics': ['Wasserstein_fast'], 'samplers': ['Norm_Min'], 'ratios': [0.01, 0.025, 0.075, 0.25, 0.5, 0.75]}.
+
+Processing inner split for outer fold 1
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 2
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 3
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 4
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 5
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 6
+Inner train = 45000, inner val = 5000, test = 10000
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 100] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 100] head...
+- resnet18[BACK] modified to suit 32x32 images
+PRETRAIN: Training resnet18 full net 100 classes on CIFAR100 dataset fold 0...

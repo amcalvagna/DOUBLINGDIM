@@ -1,0 +1,109 @@
+Running: main.py...
+Hyper parameters:
+ {'name': 'Resnet18 modified conv and Pretrained with IMAGENETv2 and then WM38', 'model': 'Resnet18tr', 'pretrained_weights': '', 'dataset': 'CIFAR10', 'batch_size': 128, 'epochs': 60, 'validation_frequency': 5, 'seed': 1, 'lr': 0.01, 'criterion': 'CrossEntropyLoss', 'criterion_kwargs': {}, 'optimizer': 'SGD', 'optimizer_kwargs': {'momentum': 0.9, 'weight_decay': 0.0005}, 'scheduler': 'CosineAnnealingLR', 'scheduler_kwargs': {'T_max': 80}, 'debug': False, 'n_kfolds': 6, 'val_quota': 0.1, 'test_quota': 0.17, 'YLIMACCU': [0, 110], 'YLIMLOSS': [0, 5], 'TLIMACCU': [0, 110], 'TLIMLOSS': [0, 5], 'origins': [], 'metrics': ['Wasserstein_fast'], 'samplers': ['Norm_Min'], 'ratios': [0.01, 0.025, 0.075, 0.25, 0.5, 0.75]}.
+
+Processing inner split for outer fold 1
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 2
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 3
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 4
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 5
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 6
+Inner train = 45000, inner val = 5000, test = 10000
+Istantiated resnet18 model... 
+- resnet18[BACK] modified to suit 32x32 images
+Using resnet18  full model 
+==========================================================================================
+Layer (type:depth-idx)                   Output Shape              Param #
+==========================================================================================
+ResNet                                   [128, 10]                 --
+├─Conv2d: 1-1                            [128, 64, 32, 32]         1,728
+├─BatchNorm2d: 1-2                       [128, 64, 32, 32]         128
+├─ReLU: 1-3                              [128, 64, 32, 32]         --
+├─Identity: 1-4                          [128, 64, 32, 32]         --
+├─Sequential: 1-5                        [128, 64, 32, 32]         --
+│    └─BasicBlock: 2-1                   [128, 64, 32, 32]         --
+│    │    └─Conv2d: 3-1                  [128, 64, 32, 32]         36,864
+│    │    └─BatchNorm2d: 3-2             [128, 64, 32, 32]         128
+│    │    └─ReLU: 3-3                    [128, 64, 32, 32]         --
+│    │    └─Conv2d: 3-4                  [128, 64, 32, 32]         36,864
+│    │    └─BatchNorm2d: 3-5             [128, 64, 32, 32]         128
+│    │    └─ReLU: 3-6                    [128, 64, 32, 32]         --
+│    └─BasicBlock: 2-2                   [128, 64, 32, 32]         --
+│    │    └─Conv2d: 3-7                  [128, 64, 32, 32]         36,864
+│    │    └─BatchNorm2d: 3-8             [128, 64, 32, 32]         128
+│    │    └─ReLU: 3-9                    [128, 64, 32, 32]         --
+│    │    └─Conv2d: 3-10                 [128, 64, 32, 32]         36,864
+│    │    └─BatchNorm2d: 3-11            [128, 64, 32, 32]         128
+│    │    └─ReLU: 3-12                   [128, 64, 32, 32]         --
+├─Sequential: 1-6                        [128, 128, 16, 16]        --
+│    └─BasicBlock: 2-3                   [128, 128, 16, 16]        --
+│    │    └─Conv2d: 3-13                 [128, 128, 16, 16]        73,728
+│    │    └─BatchNorm2d: 3-14            [128, 128, 16, 16]        256
+│    │    └─ReLU: 3-15                   [128, 128, 16, 16]        --
+│    │    └─Conv2d: 3-16                 [128, 128, 16, 16]        147,456
+│    │    └─BatchNorm2d: 3-17            [128, 128, 16, 16]        256
+│    │    └─Sequential: 3-18             [128, 128, 16, 16]        8,448
+│    │    └─ReLU: 3-19                   [128, 128, 16, 16]        --
+│    └─BasicBlock: 2-4                   [128, 128, 16, 16]        --
+│    │    └─Conv2d: 3-20                 [128, 128, 16, 16]        147,456
+│    │    └─BatchNorm2d: 3-21            [128, 128, 16, 16]        256
+│    │    └─ReLU: 3-22                   [128, 128, 16, 16]        --
+│    │    └─Conv2d: 3-23                 [128, 128, 16, 16]        147,456
+│    │    └─BatchNorm2d: 3-24            [128, 128, 16, 16]        256
+│    │    └─ReLU: 3-25                   [128, 128, 16, 16]        --
+├─Sequential: 1-7                        [128, 256, 8, 8]          --
+│    └─BasicBlock: 2-5                   [128, 256, 8, 8]          --
+│    │    └─Conv2d: 3-26                 [128, 256, 8, 8]          294,912
+│    │    └─BatchNorm2d: 3-27            [128, 256, 8, 8]          512
+│    │    └─ReLU: 3-28                   [128, 256, 8, 8]          --
+│    │    └─Conv2d: 3-29                 [128, 256, 8, 8]          589,824
+│    │    └─BatchNorm2d: 3-30            [128, 256, 8, 8]          512
+│    │    └─Sequential: 3-31             [128, 256, 8, 8]          33,280
+│    │    └─ReLU: 3-32                   [128, 256, 8, 8]          --
+│    └─BasicBlock: 2-6                   [128, 256, 8, 8]          --
+│    │    └─Conv2d: 3-33                 [128, 256, 8, 8]          589,824
+│    │    └─BatchNorm2d: 3-34            [128, 256, 8, 8]          512
+│    │    └─ReLU: 3-35                   [128, 256, 8, 8]          --
+│    │    └─Conv2d: 3-36                 [128, 256, 8, 8]          589,824
+│    │    └─BatchNorm2d: 3-37            [128, 256, 8, 8]          512
+│    │    └─ReLU: 3-38                   [128, 256, 8, 8]          --
+├─Sequential: 1-8                        [128, 512, 4, 4]          --
+│    └─BasicBlock: 2-7                   [128, 512, 4, 4]          --
+│    │    └─Conv2d: 3-39                 [128, 512, 4, 4]          1,179,648
+│    │    └─BatchNorm2d: 3-40            [128, 512, 4, 4]          1,024
+│    │    └─ReLU: 3-41                   [128, 512, 4, 4]          --
+│    │    └─Conv2d: 3-42                 [128, 512, 4, 4]          2,359,296
+│    │    └─BatchNorm2d: 3-43            [128, 512, 4, 4]          1,024
+│    │    └─Sequential: 3-44             [128, 512, 4, 4]          132,096
+│    │    └─ReLU: 3-45                   [128, 512, 4, 4]          --
+│    └─BasicBlock: 2-8                   [128, 512, 4, 4]          --
+│    │    └─Conv2d: 3-46                 [128, 512, 4, 4]          2,359,296
+│    │    └─BatchNorm2d: 3-47            [128, 512, 4, 4]          1,024
+│    │    └─ReLU: 3-48                   [128, 512, 4, 4]          --
+│    │    └─Conv2d: 3-49                 [128, 512, 4, 4]          2,359,296
+│    │    └─BatchNorm2d: 3-50            [128, 512, 4, 4]          1,024
+│    │    └─ReLU: 3-51                   [128, 512, 4, 4]          --
+├─AdaptiveAvgPool2d: 1-9                 [128, 512, 1, 1]          --
+├─Linear: 1-10                           [128, 10]                 5,130
+==========================================================================================
+Total params: 11,173,962
+Trainable params: 11,173,962
+Non-trainable params: 0
+Total mult-adds (Units.GIGABYTES): 71.10
+==========================================================================================
+Input size (MB): 1.57
+Forward/backward pass size (MB): 1258.30
+Params size (MB): 44.70
+Estimated Total Size (MB): 1304.57
+==========================================================================================
+TRAINING: Training Resnet18tr full net 10 classes on CIFAR10 dataset fold 0...

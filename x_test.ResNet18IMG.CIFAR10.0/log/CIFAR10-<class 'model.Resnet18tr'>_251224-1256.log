@@ -1,0 +1,69 @@
+Running: main.py...
+Hyper parameters:
+ {'name': 'Resnet18 modified conv and Pretrained with IMAGENETv2 and then WM38', 'model': 'Resnet18tr', 'pretrained_weights': 'IMAGENET1K_v1', 'dataset': 'CIFAR10', 'batch_size': 128, 'epochs': 60, 'validation_frequency': 5, 'seed': 1, 'lr': 0.01, 'criterion': 'CrossEntropyLoss', 'criterion_kwargs': {}, 'optimizer': 'SGD', 'optimizer_kwargs': {'momentum': 0.9, 'weight_decay': 0.0005}, 'scheduler': 'CosineAnnealingLR', 'scheduler_kwargs': {'T_max': 80}, 'debug': False, 'n_kfolds': 6, 'val_quota': 0.1, 'test_quota': 0.17, 'YLIMACCU': [0, 100], 'YLIMLOSS': [0, 5], 'TLIMACCU': [0, 110], 'TLIMLOSS': [0, 5], 'origins': [], 'metrics': ['Wasserstein_fast'], 'samplers': ['Norm_Min'], 'ratios': [0.01, 0.025, 0.075, 0.25, 0.5, 0.75]}.
+
+Processing inner split for outer fold 1
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 2
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 3
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 4
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 5
+Inner train = 45000, inner val = 5000, test = 10000
+
+Processing inner split for outer fold 6
+Inner train = 45000, inner val = 5000, test = 10000
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 10] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 10] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 10] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 10] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 10] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 10] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 10] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 10] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 10] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 10] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 10] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 10] head...
+- resnet18[BACK] modified to suit 32x32 images
+FEATURE EXTRACTION Done.
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.Cifar10.0/save/CIFAR10_metadata_0.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[38.43196341094881, 34.32060414459556, 29.509753028905834, 24.313443535480474, 20.92253135951978, 18.302831083270576]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.Cifar10.0/save/CIFAR10_metadata_1.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[38.43196341094881, 34.32060414459556, 29.509753028905834, 24.313443535480474, 20.92253135951978, 18.302831083270576], [33.317482553000445, 29.856307026697323, 26.062509669587598, 21.98891464537519, 19.29658630175618, 17.181915748318715]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.Cifar10.0/save/CIFAR10_metadata_2.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[38.43196341094881, 34.32060414459556, 29.509753028905834, 24.313443535480474, 20.92253135951978, 18.302831083270576], [33.317482553000445, 29.856307026697323, 26.062509669587598, 21.98891464537519, 19.29658630175618, 17.181915748318715], [35.7228315565153, 31.652226008940488, 27.321309326078335, 22.804793163071736, 19.81160832650494, 17.438923446861736]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.Cifar10.0/save/CIFAR10_metadata_3.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[38.43196341094881, 34.32060414459556, 29.509753028905834, 24.313443535480474, 20.92253135951978, 18.302831083270576], [33.317482553000445, 29.856307026697323, 26.062509669587598, 21.98891464537519, 19.29658630175618, 17.181915748318715], [35.7228315565153, 31.652226008940488, 27.321309326078335, 22.804793163071736, 19.81160832650494, 17.438923446861736], [35.95839421870187, 31.97862661239924, 27.61936059778236, 23.014218136224372, 20.056177013844717, 17.84118233883055]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.Cifar10.0/save/CIFAR10_metadata_4.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[38.43196341094881, 34.32060414459556, 29.509753028905834, 24.313443535480474, 20.92253135951978, 18.302831083270576], [33.317482553000445, 29.856307026697323, 26.062509669587598, 21.98891464537519, 19.29658630175618, 17.181915748318715], [35.7228315565153, 31.652226008940488, 27.321309326078335, 22.804793163071736, 19.81160832650494, 17.438923446861736], [35.95839421870187, 31.97862661239924, 27.61936059778236, 23.014218136224372, 20.056177013844717, 17.84118233883055], [34.11302435747348, 30.1271973514813, 26.00309882039437, 21.603960190477665, 18.775405731474166, 16.52097869188583]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.Cifar10.0/save/CIFAR10_metadata_5.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[38.43196341094881, 34.32060414459556, 29.509753028905834, 24.313443535480474, 20.92253135951978, 18.302831083270576], [33.317482553000445, 29.856307026697323, 26.062509669587598, 21.98891464537519, 19.29658630175618, 17.181915748318715], [35.7228315565153, 31.652226008940488, 27.321309326078335, 22.804793163071736, 19.81160832650494, 17.438923446861736], [35.95839421870187, 31.97862661239924, 27.61936059778236, 23.014218136224372, 20.056177013844717, 17.84118233883055], [34.11302435747348, 30.1271973514813, 26.00309882039437, 21.603960190477665, 18.775405731474166, 16.52097869188583], [36.76210812761565, 32.69440750290232, 28.56676909624366, 23.800274619523407, 20.6613214525496, 18.152003158415027]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loading Full Dataset Trained model data: ./test.ResNet18IMG.Cifar10.0/save/LINEAR[512, 10]_CIFAR10_trains_60.pt 
+Loading doubling estimates data from: ./test.ResNet18IMG.Cifar10.0/save/LINEAR[512, 10]_CIFAR10_dds.pt 
+Drawing ./test.ResNet18IMG.Cifar10.0/img/LINEAR[512, 10]-train-Wasserstein_fast-Norm_Min-60.png
+TRAIN AND PLOT Done.
+processing took:  3.55 seconds (0.06) minutes).
