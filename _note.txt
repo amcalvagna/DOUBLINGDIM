@@ -1,0 +1,104 @@
+########################################
+#cosine similarity
+import numpy as np
+
+x = np.array([1, 2, 3])
+y = np.array([4, 5, 6])
+
+cos_sim = np.dot(x, y) / (np.linalg.norm(x) * np.linalg.norm(y))
+print("Cosine similarity:", cos_sim)
+
+#######################################
+#wasserstein distance in 2D
+import numpy as np
+import ot  # pip install pot
+
+def wasserstein_dist_cnn(x, y):
+    """
+    Calcola la distanza di Wasserstein tra due feature maps da CNN.
+    
+    Parametri:
+        x, y : array numpy con shape (C, H, W)
+    
+    Ritorna:
+        distanza (float)
+    """
+    # Reshape: ogni posizione spaziale diventa un punto in R^C
+    C, H, W = x.shape
+    X = x.reshape(C, -1).T   # shape (H*W, C)
+    Y = y.reshape(C, -1).T   # shape (H*W, C)
+
+    # Distribuzioni di probabilità uniformi (o pesate dai valori)
+    a = np.ones(X.shape[0]) / X.shape[0]
+    b = np.ones(Y.shape[0]) / Y.shape[0]
+
+    # Matrice dei costi (distanze euclidee tra vettori in R^C)
+    M = ot.dist(X, Y, metric="euclidean")
+
+    # Calcolo della distanza di Wasserstein (Earth Mover's Distance)
+    dist = ot.emd2(a, b, M)
+    return dist
+
+# 🔹 Esempio di utilizzo
+fmap1 = np.random.rand(16, 8, 8)   # 16 canali, 8x8 spatial
+fmap2 = np.random.rand(16, 8, 8)
+
+d = wasserstein_dist_cnn(fmap1, fmap2)
+print("Distanza di Wasserstein CNN:", d)
+
+"""
+LA pipeline è: save_features.py -> custom_spread.py -> fc_train.py 
+
+compare_test.py e' model_train.py di controllo 
+
+model_train serve per fare il training completo di resnet18 su cifar10 e salvare i pesi in resnet18_cifar10.pth
+
+la pypeline ora e' nnet_pretrain (on CIFAR10) -> save_features (extract) - ddcore (make doubling distance coresets)-> fctrain (compute and plot results on fc layer)
+"""
+
+
+20251208>>>>>>
+ristrutturato tutto il codice circa un mesetto fa e provato con cifar10 e cifar100 
+produco accuracy e loss a vari setting e compression ratios del dataset delle features ridotto in base alla griglia doubling (epsilon-net)
+
+sto oggi provando a calcoare stimandola la doubling dimension dei coresets compressi usati per il training 
+ed in parallelo ad aggiunger una resnet50 che performi bene su cifar100 (una customizzata per cifar e pretrained su imagenetv2 per poi farne il finetuning su cifar100)
+
+doublingtorch è ilfile in cui implemento la stima del valore della doubling dimension di un dataset. 
+uso una sua funzione per il calcolo nello script principale train.py. Che rinominer0 presto main.py. 
+
+20251209 >>>>>>>> riunione con Rundo: 
+con resnet18 e resnet50 non riesco a fare bene su cifar100 > cambiare dataset e usarne uno che mi manda lui su difetti in fette di silicio
+provare con una resnet18 o 50 modificata per fare meglio: 1) ne provo una preaddestrata con imagenetv2, e riaddestrata con cifar100, alla fine il fc sulle features fa solo circa 57% 
+provo una resnet18 addestrata con cifar100 da zero, modificata per cifar, custom presa da medium:
+provo una resnet18 settata come quella precaricata da timm.models, che dichiara 78% su cifar100: 
+calcolare le dd per ratio da 10 a 100% 
+provare il dataset dei wafer...
+
+
+finora ho. girato con lr 1e-3, batch 128 optim Adam e loss nn.CrossEntropyLoss
+"metrics" : ["Manhattan", "Mahalanobis", "Wasserstein_fast"],
+  "samplers" : ["Random", "Centroid"],
+
+  ratios = [0.1, 0.25, 0.5, 0.75, 1.] // target compression ratios
+
+
+  farlo caricare a lui e poi salvarlo e ricaricarlo 
+  oppure trovare il problema?
+
+  test.ResNet18IMG.Cifar100.0 con i suoi settaggi (in particolare ho messo il lr a .01 invece di .1 ) sta andando molto meglio....
+  ho anche modificato eliminandolo il kfold per cui sta usando (train, test, test) originale cifar non aumentata (solo normalizzata)come terna di dati 
+  il freeze_bn e' False e sto precaricando in partenza i pesi del training su imagenet1k_v1. poi prima del training o della feature extraction 
+  tolgo l'fc con 1000 out e lo rimpiazzo con uno con 100 output . 
+  PROVARE A METTERE freeze_bn a True e 
+  provare la resnet50tr con cifar100
+  funziona finalmente bene anche in validazione se metto il learning rate a .01. anche se non funziona col solo classificatore...
+
+  ./makeall.sh test.ResNet18IMG.WM38K.0  --run
+  il train va in out of memory ed [ lentissimo]: il permute era necessario? devo mettere i tensori del dataset su mps? devo trasformarli prima?
+  vedere un esempio? tutto risolto lasciando mettendo su mps e lasciando come trasformazioni solo torgb e totensor, che fa il resto. 
+
+
+  PROVARE A METTERE freeze_bn a True e 
+  provare la resnet50tr con cifar100
+  provare lr e batch size diversi per il solo classificatore.

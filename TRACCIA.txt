@@ -1,0 +1,3 @@
+formulette per vc dim e doubling dim relazionato a epsilon (granularita della rete) e dimensione del coreset e S dim del dataset. 
+correlare la doubling dim al massimo rapporto di riduzione possibile ovvero ridondanza nel dataset.
+

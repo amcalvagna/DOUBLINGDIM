@@ -1,0 +1,39 @@
+{
+  "name": "Resnet18 modified conv and Pretrained with IMAGENETv2 and then WM38",
+  "model": "Resnet18tr",
+  "pretrained_weights" : "IMAGENET1K_v1",
+  "dataset": "WM38",
+  "batch_size": 128,
+  "epochs": 60,
+  "validation_frequency": 5,
+  "seed": 1, 
+  "lr": 0.01,
+  "criterion": "CrossEntropyLoss",
+  "criterion_kwargs": {},
+  "optimizer": "SGD",
+  "optimizer_kwargs": {
+    "momentum": 0.9,
+    "weight_decay": 0.0005
+  },
+  "scheduler": "CosineAnnealingLR",
+  "scheduler_kwargs": {
+    "T_max": 80
+  },
+  "debug": false,
+  
+  "n_kfolds" : 6,
+  "val_quota": 0.1,
+  "test_quota": 0.17,
+  
+  "YLIMACCU" : [0, 110],
+  "YLIMLOSS" : [0, 5],
+  "TLIMACCU": [0, 110], 
+  "TLIMLOSS": [0, 5],
+
+  "origins" : [],
+  "metrics" : ["euclidean"],
+  "samplers" : ["random"],
+
+  "ratios" : [0.99] 
+
+}

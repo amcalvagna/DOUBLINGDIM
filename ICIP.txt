@@ -1,0 +1,24 @@
+Act as a senior researcher in neural networks for image processing.
+Write a scientific paper draft, in latex, with the following sections:
+Abstract, Introduction, Related Work, Method, Experiments, Discussion.
+
+Here is the problem:
+Some neural network image classification applications need to be run on quick and small, portable hardware. As an example, we consider the case of a wafer defects type classifier, strongly required in the context of electronic devices manufacturing industry. But neural networks are significantly expensive in terms of computational resources due to the complexity of both the NN and the vast size of data required for its effective training: is it possible to reduce training cost of a classifeir by identifying salient subsets of features with training ability equivalent to full dataset, or at least reduced by a predicable and controlled amount? 
+
+
+Here is the method:
+we reduce the size of the classifier training dataset by means of an epsilon-net, which we chose as the criteria to identify salient training features for a network final classifier. We used a small resnet18 to extract the features off an images dataset and tested the performance of a one layer linear classifier after training with subsets (coresets) of features obtained by sampling the whole feature set at several degrees of granularities. 
+We implemented an algorithm to partition the multidimensional feature space with a grid such and sample only one point per grid element. Resizing that grid, will compress the feature dataset exactly at a desired compression ratio. We also extensively applied balanced k-folding to the training/validation and testing to check for consistency of the results. 
+
+There is one python file with the code for computing the coreset producing grid that I am attaching for you to include it in this paper as pseudocode.
+
+Here are the results:
+We plot accuracy and loss results for both training and testing in the case of three different datasets, CIFAR10, CIFAR100 and WM38 and show that the linear classifier performance start decreadsing significantly only if extremely high compression ratios are applied, that is, the size of data coreset used for the classifier training has to be reduced a lot to significantly impact the performance. Conversely, a small sized coresets of features, like 5% - 10% of the original training dataset size, already allow the classifier to reach accuracy close or equivalent to that of a full size trained network, also in much shorter or no training time, as shown by the data plots. 
+There are six double image plots files I am attaching for you to show and comment.       
+  
+Use formal academic tone. Do not invent results or citations.
+
+dati riportati: 
+test.ResNet18IMG.WM38K.2
+test.ResNet18IMG.Cifar100.2
+test.ResNet18IMG.CIFAR10.0
