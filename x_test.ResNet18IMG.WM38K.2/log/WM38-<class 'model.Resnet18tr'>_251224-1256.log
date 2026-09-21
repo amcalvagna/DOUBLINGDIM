@@ -1,0 +1,69 @@
+Running: main.py...
+Hyper parameters:
+ {'name': 'Resnet18 modified conv and Pretrained with IMAGENETv2 and then WM38', 'model': 'Resnet18tr', 'pretrained_weights': 'IMAGENET1K_v1', 'dataset': 'WM38', 'batch_size': 128, 'epochs': 60, 'validation_frequency': 5, 'seed': 1, 'lr': 0.01, 'criterion': 'CrossEntropyLoss', 'criterion_kwargs': {}, 'optimizer': 'SGD', 'optimizer_kwargs': {'momentum': 0.9, 'weight_decay': 0.0005}, 'scheduler': 'CosineAnnealingLR', 'scheduler_kwargs': {'T_max': 80}, 'debug': False, 'n_kfolds': 6, 'val_quota': 0.1, 'test_quota': 0.17, 'YLIMACCU': [0, 100], 'YLIMLOSS': [0, 5], 'TLIMACCU': [0, 110], 'TLIMLOSS': [0, 5], 'origins': [], 'metrics': ['Wasserstein_fast'], 'samplers': ['Norm_Min'], 'ratios': [0.01, 0.025, 0.075, 0.25, 0.5, 0.75]}.
+
+Processing inner split for outer fold 1
+Inner train = 28511, inner val = 3168, test = 6336
+
+Processing inner split for outer fold 2
+Inner train = 28511, inner val = 3168, test = 6336
+
+Processing inner split for outer fold 3
+Inner train = 28511, inner val = 3168, test = 6336
+
+Processing inner split for outer fold 4
+Inner train = 28511, inner val = 3168, test = 6336
+
+Processing inner split for outer fold 5
+Inner train = 28511, inner val = 3168, test = 6336
+
+Processing inner split for outer fold 6
+Inner train = 28512, inner val = 3168, test = 6335
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 38] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 38] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 38] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 38] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 38] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 38] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 38] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 38] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 38] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 38] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 38] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 38] head...
+- resnet18[BACK] modified to suit 32x32 images
+FEATURE EXTRACTION Done.
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.WM38K.2/save/WM38_metadata_0.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[77.89269447675906, 67.46736021526158, 56.50225965832942, 44.433038458024384, 37.852807264222065, 32.86143260600511]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.WM38K.2/save/WM38_metadata_1.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[77.89269447675906, 67.46736021526158, 56.50225965832942, 44.433038458024384, 37.852807264222065, 32.86143260600511], [70.21929884888232, 61.4747268606734, 53.35090825648513, 44.61428106414678, 37.67344256508659, 31.45955288818368]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.WM38K.2/save/WM38_metadata_2.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[77.89269447675906, 67.46736021526158, 56.50225965832942, 44.433038458024384, 37.852807264222065, 32.86143260600511], [70.21929884888232, 61.4747268606734, 53.35090825648513, 44.61428106414678, 37.67344256508659, 31.45955288818368], [65.87099486682564, 58.29436322697438, 49.38488847692497, 41.979334853735054, 37.156723835039884, 31.761616446863627]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.WM38K.2/save/WM38_metadata_3.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[77.89269447675906, 67.46736021526158, 56.50225965832942, 44.433038458024384, 37.852807264222065, 32.86143260600511], [70.21929884888232, 61.4747268606734, 53.35090825648513, 44.61428106414678, 37.67344256508659, 31.45955288818368], [65.87099486682564, 58.29436322697438, 49.38488847692497, 41.979334853735054, 37.156723835039884, 31.761616446863627], [71.99822311475873, 65.27257422730327, 56.28456743393326, 45.664362288749544, 39.429742014501244, 33.69429099361878]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.WM38K.2/save/WM38_metadata_4.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[77.89269447675906, 67.46736021526158, 56.50225965832942, 44.433038458024384, 37.852807264222065, 32.86143260600511], [70.21929884888232, 61.4747268606734, 53.35090825648513, 44.61428106414678, 37.67344256508659, 31.45955288818368], [65.87099486682564, 58.29436322697438, 49.38488847692497, 41.979334853735054, 37.156723835039884, 31.761616446863627], [71.99822311475873, 65.27257422730327, 56.28456743393326, 45.664362288749544, 39.429742014501244, 33.69429099361878], [71.92557617160492, 65.51523629040457, 56.8621727496502, 45.411719923709825, 38.571216915443074, 32.60181172579178]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.WM38K.2/save/WM38_metadata_5.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[77.89269447675906, 67.46736021526158, 56.50225965832942, 44.433038458024384, 37.852807264222065, 32.86143260600511], [70.21929884888232, 61.4747268606734, 53.35090825648513, 44.61428106414678, 37.67344256508659, 31.45955288818368], [65.87099486682564, 58.29436322697438, 49.38488847692497, 41.979334853735054, 37.156723835039884, 31.761616446863627], [71.99822311475873, 65.27257422730327, 56.28456743393326, 45.664362288749544, 39.429742014501244, 33.69429099361878], [71.92557617160492, 65.51523629040457, 56.8621727496502, 45.411719923709825, 38.571216915443074, 32.60181172579178], [72.07186542451382, 63.2204243093729, 54.259734840132296, 45.56548351107631, 39.331354028196074, 33.44734227587469]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loading Full Dataset Trained model data: ./test.ResNet18IMG.WM38K.2/save/LINEAR[512, 38]_WM38_trains_60.pt 
+Loading doubling estimates data from: ./test.ResNet18IMG.WM38K.2/save/LINEAR[512, 38]_WM38_dds.pt 
+Drawing ./test.ResNet18IMG.WM38K.2/img/LINEAR[512, 38]-train-Wasserstein_fast-Norm_Min-60.png
+TRAIN AND PLOT Done.
+processing took:  2.49 seconds (0.04) minutes).

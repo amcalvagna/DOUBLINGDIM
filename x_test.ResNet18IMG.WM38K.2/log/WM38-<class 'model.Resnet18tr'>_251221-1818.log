@@ -1,0 +1,284 @@
+Running: main.py...
+Hyper parameters:
+ {'name': 'Resnet18 modified conv and Pretrained with IMAGENETv2 and then WM38', 'model': 'Resnet18tr', 'pretrained_weights': 'IMAGENET1K_v1', 'dataset': 'WM38', 'batch_size': 128, 'epochs': 60, 'validation_frequency': 5, 'seed': 1, 'lr': 0.01, 'criterion': 'CrossEntropyLoss', 'criterion_kwargs': {}, 'optimizer': 'SGD', 'optimizer_kwargs': {'momentum': 0.9, 'weight_decay': 0.0005}, 'scheduler': 'CosineAnnealingLR', 'scheduler_kwargs': {'T_max': 80}, 'debug': False, 'n_kfolds': 6, 'val_quota': 0.1, 'test_quota': 0.17, 'YLIMACCU': [0, 100], 'YLIMLOSS': [0, 5], 'TLIMACCU': [0, 110], 'TLIMLOSS': [0, 5], 'origins': [], 'metrics': ['Wasserstein_fast'], 'samplers': ['Norm_Min'], 'ratios': [0.01, 0.025, 0.075, 0.25, 0.5, 0.75]}.
+
+Processing inner split for outer fold 1
+Inner train = 28511, inner val = 3168, test = 6336
+
+Processing inner split for outer fold 2
+Inner train = 28511, inner val = 3168, test = 6336
+
+Processing inner split for outer fold 3
+Inner train = 28511, inner val = 3168, test = 6336
+
+Processing inner split for outer fold 4
+Inner train = 28511, inner val = 3168, test = 6336
+
+Processing inner split for outer fold 5
+Inner train = 28511, inner val = 3168, test = 6336
+
+Processing inner split for outer fold 6
+Inner train = 28512, inner val = 3168, test = 6335
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 38] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 38] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 38] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 38] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 38] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 38] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 38] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 38] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 38] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 38] head...
+- resnet18[BACK] modified to suit 32x32 images
+Istantiated resnet18 model... 
+freezing bach norm layers stats
+resnet18 loaded Weights from ./models/resnet18/resnet18-f37072fd.pth
+- LINEAR[512, 38] Classifier initialized
+Istantiated resnet18 full model with LINEAR[512, 38] head...
+- resnet18[BACK] modified to suit 32x32 images
+FEATURE EXTRACTION Done.
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.WM38K.2/save/WM38_metadata_0.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[77.89269447675906, 67.46736021526158, 56.50225965832942, 44.433038458024384, 37.852807264222065, 32.86143260600511]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.WM38K.2/save/WM38_metadata_1.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[77.89269447675906, 67.46736021526158, 56.50225965832942, 44.433038458024384, 37.852807264222065, 32.86143260600511], [70.21929884888232, 61.4747268606734, 53.35090825648513, 44.61428106414678, 37.67344256508659, 31.45955288818368]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.WM38K.2/save/WM38_metadata_2.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[77.89269447675906, 67.46736021526158, 56.50225965832942, 44.433038458024384, 37.852807264222065, 32.86143260600511], [70.21929884888232, 61.4747268606734, 53.35090825648513, 44.61428106414678, 37.67344256508659, 31.45955288818368], [65.87099486682564, 58.29436322697438, 49.38488847692497, 41.979334853735054, 37.156723835039884, 31.761616446863627]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.WM38K.2/save/WM38_metadata_3.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[77.89269447675906, 67.46736021526158, 56.50225965832942, 44.433038458024384, 37.852807264222065, 32.86143260600511], [70.21929884888232, 61.4747268606734, 53.35090825648513, 44.61428106414678, 37.67344256508659, 31.45955288818368], [65.87099486682564, 58.29436322697438, 49.38488847692497, 41.979334853735054, 37.156723835039884, 31.761616446863627], [71.99822311475873, 65.27257422730327, 56.28456743393326, 45.664362288749544, 39.429742014501244, 33.69429099361878]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.WM38K.2/save/WM38_metadata_4.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[77.89269447675906, 67.46736021526158, 56.50225965832942, 44.433038458024384, 37.852807264222065, 32.86143260600511], [70.21929884888232, 61.4747268606734, 53.35090825648513, 44.61428106414678, 37.67344256508659, 31.45955288818368], [65.87099486682564, 58.29436322697438, 49.38488847692497, 41.979334853735054, 37.156723835039884, 31.761616446863627], [71.99822311475873, 65.27257422730327, 56.28456743393326, 45.664362288749544, 39.429742014501244, 33.69429099361878], [71.92557617160492, 65.51523629040457, 56.8621727496502, 45.411719923709825, 38.571216915443074, 32.60181172579178]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loaded fold <_io.TextIOWrapper name='./test.ResNet18IMG.WM38K.2/save/WM38_metadata_5.json' mode='r' encoding='utf-8'>/6 precomputed grid scales [[77.89269447675906, 67.46736021526158, 56.50225965832942, 44.433038458024384, 37.852807264222065, 32.86143260600511], [70.21929884888232, 61.4747268606734, 53.35090825648513, 44.61428106414678, 37.67344256508659, 31.45955288818368], [65.87099486682564, 58.29436322697438, 49.38488847692497, 41.979334853735054, 37.156723835039884, 31.761616446863627], [71.99822311475873, 65.27257422730327, 56.28456743393326, 45.664362288749544, 39.429742014501244, 33.69429099361878], [71.92557617160492, 65.51523629040457, 56.8621727496502, 45.411719923709825, 38.571216915443074, 32.60181172579178], [72.07186542451382, 63.2204243093729, 54.259734840132296, 45.56548351107631, 39.331354028196074, 33.44734227587469]] for target ratios [0.01, 0.025, 0.075, 0.25, 0.5, 0.75] 
+Loading Full Dataset Trained model data: ./test.ResNet18IMG.WM38K.2/save/LINEAR[512, 38]_WM38_trains_60.pt 
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:1%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 285
+Processed points amount: 285
+Approx doubling constant λ: 33
+Approx doubling dimension  : 5.044394119358453
+Elapsed time: 0:00:16.564316.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:2%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 713
+Processed points amount: 713
+Approx doubling constant λ: 43
+Approx doubling dimension  : 5.426264754702098
+Elapsed time: 0:00:19.577648.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:8%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 2138
+Processed points amount: 2138
+Approx doubling constant λ: 56
+Approx doubling dimension  : 5.807354922057604
+Elapsed time: 0:00:29.034143.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:25%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 7128
+Processed points amount: 7128
+Approx doubling constant λ: 62
+Approx doubling dimension  : 5.954196310386875
+Elapsed time: 0:01:22.902332.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:50%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 14256
+Processed points amount: 14256
+Approx doubling constant λ: 64
+Approx doubling dimension  : 6.0
+Elapsed time: 0:04:00.387195.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:75%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 21383
+Processed points amount: 21383
+Approx doubling constant λ: 68
+Approx doubling dimension  : 6.087462841250339
+Elapsed time: 0:10:50.786365.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:1%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 285
+Processed points amount: 285
+Approx doubling constant λ: 35
+Approx doubling dimension  : 5.129283016944966
+Elapsed time: 0:00:22.552196.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:2%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 713
+Processed points amount: 713
+Approx doubling constant λ: 55
+Approx doubling dimension  : 5.78135971352466
+Elapsed time: 0:00:29.831614.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:8%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 2138
+Processed points amount: 2138
+Approx doubling constant λ: 67
+Approx doubling dimension  : 6.066089190457772
+Elapsed time: 0:00:39.970754.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:25%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 7128
+Processed points amount: 7128
+Approx doubling constant λ: 77
+Approx doubling dimension  : 6.266786540694901
+Elapsed time: 0:01:26.328490.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:50%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 14256
+Processed points amount: 14256
+Approx doubling constant λ: 95
+Approx doubling dimension  : 6.569855608330948
+Elapsed time: 0:04:31.359749.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:75%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 21383
+Processed points amount: 21383
+Approx doubling constant λ: 82
+Approx doubling dimension  : 6.357552004618084
+Elapsed time: 0:12:03.359736.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:1%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 285
+Processed points amount: 285
+Approx doubling constant λ: 35
+Approx doubling dimension  : 5.129283016944966
+Elapsed time: 0:00:22.432498.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:2%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 713
+Processed points amount: 713
+Approx doubling constant λ: 45
+Approx doubling dimension  : 5.491853096329675
+Elapsed time: 0:00:28.745569.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:8%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 2138
+Processed points amount: 2138
+Approx doubling constant λ: 51
+Approx doubling dimension  : 5.672425341971495
+Elapsed time: 0:00:37.706082.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:25%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 7128
+Processed points amount: 7128
+Approx doubling constant λ: 64
+Approx doubling dimension  : 6.0
+Elapsed time: 0:01:24.121409.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:50%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 14256
+Processed points amount: 14256
+Approx doubling constant λ: 71
+Approx doubling dimension  : 6.149747119504682
+Elapsed time: 0:04:14.753208.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:75%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 21383
+Processed points amount: 21383
+Approx doubling constant λ: 71
+Approx doubling dimension  : 6.149747119504682
+Elapsed time: 0:11:24.037496.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:1%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 285
+Processed points amount: 285
+Approx doubling constant λ: 36
+Approx doubling dimension  : 5.169925001442312
+Elapsed time: 0:00:22.373605.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:2%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 713
+Processed points amount: 713
+Approx doubling constant λ: 49
+Approx doubling dimension  : 5.614709844115208
+Elapsed time: 0:00:26.140778.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:8%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 2138
+Processed points amount: 2138
+Approx doubling constant λ: 51
+Approx doubling dimension  : 5.672425341971495
+Elapsed time: 0:00:32.271253.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:25%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 7128
+Processed points amount: 7128
+Approx doubling constant λ: 52
+Approx doubling dimension  : 5.700439718141092
+Elapsed time: 0:01:15.199294.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:50%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 14256
+Processed points amount: 14256
+Approx doubling constant λ: 55
+Approx doubling dimension  : 5.78135971352466
+Elapsed time: 0:03:54.223032.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:75%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 21383
+Processed points amount: 21383
+Approx doubling constant λ: 57
+Approx doubling dimension  : 5.832890014164741
+Elapsed time: 0:10:57.320154.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:1%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 285
+Processed points amount: 285
+Approx doubling constant λ: 36
+Approx doubling dimension  : 5.169925001442312
+Elapsed time: 0:00:22.620903.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:2%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 713
+Processed points amount: 713
+Approx doubling constant λ: 60
+Approx doubling dimension  : 5.906890595608519
+Elapsed time: 0:00:25.327550.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:8%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 2138
+Processed points amount: 2138
+Approx doubling constant λ: 63
+Approx doubling dimension  : 5.977279923499917
+Elapsed time: 0:00:31.788093.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:25%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 7128
+Processed points amount: 7128
+Approx doubling constant λ: 55
+Approx doubling dimension  : 5.78135971352466
+Elapsed time: 0:01:19.942744.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:50%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 14256
+Processed points amount: 14256
+Approx doubling constant λ: 61
+Approx doubling dimension  : 5.930737337562887
+Elapsed time: 0:04:01.033588.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:75%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 21383
+Processed points amount: 21383
+Approx doubling constant λ: 61
+Approx doubling dimension  : 5.930737337562887
+Elapsed time: 0:10:53.129850.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:1%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 285
+Processed points amount: 285
+Approx doubling constant λ: 33
+Approx doubling dimension  : 5.044394119358453
+Elapsed time: 0:00:20.534673.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:2%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 713
+Processed points amount: 713
+Approx doubling constant λ: 39
+Approx doubling dimension  : 5.285402218862249
+Elapsed time: 0:00:25.745262.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:8%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 2138
+Processed points amount: 2138
+Approx doubling constant λ: 47
+Approx doubling dimension  : 5.554588851677638
+Elapsed time: 0:00:34.139380.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:25%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 7128
+Processed points amount: 7128
+Approx doubling constant λ: 59
+Approx doubling dimension  : 5.882643049361842
+Elapsed time: 0:01:18.643594.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:50%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 14256
+Processed points amount: 14256
+Approx doubling constant λ: 60
+Approx doubling dimension  : 5.906890595608519
+Elapsed time: 0:04:06.875528.
+Computing DD for model: LINEAR[512, 38] on WM38 coreset ('Wasserstein_fast', 'Norm_Min') with compression:75%
+Using max 100 random points, 10 spaced radiuses pro capite, wwith early stop at max 21384
+Processed points amount: 21384
+Approx doubling constant λ: 62
+Approx doubling dimension  : 5.954196310386875
+Elapsed time: 0:10:14.146650.
+Drawing ./test.ResNet18IMG.WM38K.2/img/LINEAR[512, 38]-train-Wasserstein_fast-Norm_Min-60.png
+TRAIN AND PLOT Done.
+processing took:  6459.11 seconds (107.65) minutes).
