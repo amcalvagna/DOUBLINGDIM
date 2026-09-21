@@ -1,0 +1,39 @@
+\documentclass[a4paper,portrait]{article}
+\usepackage[margin=.1cm]{geometry}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{figure}[H]
+\centering
+% Adjust these to your filenames
+\begin{tabular}{ccc}
+\includegraphics[width=0.30\linewidth]{../img/ResNet18FC-251014-0208-500-wasserstein-uniform-no_LRS.png} &
+\includegraphics[width=0.30\linewidth]{../img/ResNet18FC-251014-0906-500-wasserstein-gaussian-no_LRS.png} &
+\includegraphics[width=0.30\linewidth]{../img/ResNet18FC-251014-0929-500-wasserstein-dirac_delta-no_LRS.png} \\[2mm]
+
+\includegraphics[width=0.30\linewidth]{../img/ResNet18FC-251014-1156-500-cosine-uniform-no_LRS.png} &
+\includegraphics[width=0.30\linewidth]{../img/ResNet18FC-251014-1145-500-cosine-gaussian-no_LRS.png} &
+\includegraphics[width=0.30\linewidth]{../img/ResNet18FC-251014-1208-500-cosine-dirac_delta-no_LRS.png} \\[2mm]
+
+\includegraphics[width=0.30\linewidth]{../img/ResNet18FC-251014-1053-500-random_noise-uniform-no_LRS.png} &
+\includegraphics[width=0.30\linewidth]{../img/ResNet18FC-251014-1029-500-random_noise-gaussian-no_LRS.png} &
+\includegraphics[width=0.30\linewidth]{../img/ResNet18FC-251014-1119-500-random_noise-dirac_delta-no_LRS.png} \\[2mm]
+
+\includegraphics[width=0.30\linewidth]{../img/ResNet18FC-251014-0131-500-random_gauss-uniform-no_LRS.png } &
+\includegraphics[width=0.30\linewidth]{../img/ResNet18FC-251014-1004-500-random_gauss-gaussian-no_LRS.png} &
+\includegraphics[width=0.30\linewidth]{../img/ResNet18FC-251014-0947-500-random_gauss-dirac_delta-no_LRS.png} \\
+
+\end{tabular}
+\end{figure}
+
+\end{document}
+
+%
+
+
+
